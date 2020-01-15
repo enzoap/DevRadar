@@ -61,5 +61,9 @@ module.exports = {
 
     async destroy(request, response){
         //destroy
+        const { id: idDev } = request.params
+        const dev = await DevModel.findByIdAndDelete(idDev)
+
+        return response.json(dev)
     }
 }
