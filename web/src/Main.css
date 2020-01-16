@@ -1,0 +1,32 @@
+main {
+    flex: 1;
+
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    list-style: none;
+}
+
+.user-info strong {
+    display: block;
+    font-size: 16px;
+    color: #333333;
+}
+
+.user-info span {
+    font-size: 13px;
+    color: #999999;
+    margin-top: 2px;
+}
+
+@media (max-width: 650px){
+    main {
+        width: 100%;
+    }
+    main ul {
+        grid-template-columns: 1fr;
+    }
+}

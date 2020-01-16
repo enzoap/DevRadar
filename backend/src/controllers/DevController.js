@@ -8,7 +8,7 @@ module.exports = {
     async index(request, response){
         const devs = await DevModel.find();
         
-        return response.json({devs})
+        return response.json(devs)
     },
 
     async store (request, response) {
