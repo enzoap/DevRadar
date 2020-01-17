@@ -2,6 +2,7 @@ const { Router } = require('express')
 
 const DevController = require('./controllers/DevController')
 const SearchController = require('./controllers/SearchController')
+const SearchDevId = require('./controllers/SearchDevId')
 
 const routes = Router()
 
@@ -14,6 +15,7 @@ const routes = Router()
 // Body: request.body (Dados para criação ou alteração de um registro)
 
 routes.get('/devs',DevController.index)
+routes.get('/dev/:id',SearchDevId.index)
 routes.post('/devs', DevController.store)
 routes.put('/dev/:id',DevController.update)
 routes.delete('/dev/:id',DevController.destroy)

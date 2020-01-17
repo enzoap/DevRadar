@@ -44,19 +44,19 @@ module.exports = {
     },
 
     async update(request, response) {
-        
     //update nome, avatar, bio, techs
-        const { id: idDev } = request.params
+        const {id: idDev} = request.params
+
         const { name , avatar_url , bio, techs } = request.body
-        
-        const dev  = await DevModel.findByIdAndUpdate(idDev, {
+
+        const devUpdate  = await DevModel.findByIdAndUpdate(idDev, {
             name ,
             avatar_url,
             bio,
             techs
         }, {new: true})
-        
-        return response.json(dev)
+
+        return response.json(devUpdate)
     },
 
     async destroy(request, response){
