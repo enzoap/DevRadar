@@ -4,7 +4,7 @@
   "description": "Um app para encontrar devs próximos a voçê dependenddo da tecnologia de escolha.",
   "scripts": {
     "start": "cd backend && node src/index.js",
-    "build": "cd backend && yarn install && cd .. && cd web && yarn install && yarn run build && cd .."
+    "build": "cd backend && npm install && cd .. && cd web && npm install && npm run build && cd .."
   },
   "repository": {
     "type": "git",
