@@ -49,11 +49,13 @@ module.exports = {
 
         const { name , avatar_url , bio, techs } = request.body
 
+        const techsArray = parseStringAsArray(techs)
+
         const devUpdate  = await DevModel.findByIdAndUpdate(idDev, {
             name ,
             avatar_url,
             bio,
-            techs
+            techs : techsArray
         }, {new: true})
 
         return response.json(devUpdate)
