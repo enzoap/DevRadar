@@ -1,8 +1,14 @@
 import React from "react";
-
 import './styles.css'
 
-function DevItem({dev}) {
+function DevItem({dev, key, onClick}) {
+
+    async function deleteUser() {
+
+        await onClick(key)
+
+    }
+
     return (
         <li  className="dev-item">
             <header>
@@ -12,6 +18,7 @@ function DevItem({dev}) {
                     <span>{dev.techs.join(', ')}</span>
                 </div>
             </header>
+            <span><button onClick={deleteUser}>Excluir</button></span>
             <p>{dev.bio}</p>
             <a href={`https://github.com/${dev.github_username}`}>Acessar perfil no Github</a>
         </li>

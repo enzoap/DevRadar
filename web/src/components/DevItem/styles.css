@@ -38,3 +38,18 @@ li.dev-item a {
 li.dev-item a:hover {
     color: #5a2ea6;
 }
+
+li.dev-item span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+li.dev-item span button{
+    color: white;
+    background: #7d40e7;
+    border-radius: 10px;
+    width: 100px
+;
+}
